@@ -43,8 +43,8 @@
 <div align=center>
 <img src="./img/SiamFC/5.png" height=350, width=500>
 <div align=left>
--- 开始迭代更新参数    
--- 网络结构  
+-- 开始迭代更新参数      
+-- 网络结构    
 >self.feat_extraction = nn.Sequential(  
 	nn.Conv2d(3, 96, 11, 2),            
     nn.BatchNorm2d(96),
