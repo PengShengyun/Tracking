@@ -1,8 +1,8 @@
 # Computer Vision: Tracking
 ## Updated:
 ### *Siamese Series:*  
-**SINT**
-**SiamFC**
+**SINT**   
+**SiamFC**  
 
 ## To be continued：  
 ***SiamRPN***  
