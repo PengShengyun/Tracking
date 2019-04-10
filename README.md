@@ -1,6 +1,7 @@
 # Computer Vision: Tracking
 ## Finished:
-***SINT***
+### *Siamese Series:*  
+**SINT**
 
 ## To be continued：
 ***SiamFC***  
