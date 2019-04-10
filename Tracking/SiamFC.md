@@ -45,11 +45,7 @@
 <div align=left>
 -- 开始迭代更新参数    
 -- 网络结构  
-<pre><code>
-***PyTorch***
-</code><pre>
-```
-self.feat_extraction = nn.Sequential(  
+>self.feat_extraction = nn.Sequential(  
 	nn.Conv2d(3, 96, 11, 2),            
     nn.BatchNorm2d(96),
 	nn.ReLU(inplace=True),
@@ -66,7 +62,7 @@ self.feat_extraction = nn.Sequential(
     nn.ReLU(inplace=True),
     nn.Conv2d(384, 256, 3, 1, groups=2)  
 )
-```
+
 
 ## *Tracking part*
 - **直接整理一遍顺序**  
