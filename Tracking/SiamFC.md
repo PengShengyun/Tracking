@@ -22,16 +22,16 @@
 -- 先定义score map上单个点的loss，采用逻辑回归的loss思想，也就是信息gain，loss函数l(y, v)：  
 <div align=center>
 <img src="./img/SiamFC/1.png" height=50, width=250>
-<div align=left>
+<div align=left>  
 -- 有了l函数以后可以求得score map上17x17个点的所有loss然后求平均就有了一个pair的loss：  
 <div align=center>
 <img src="./img/SiamFC/2.png" height=60, width=250>
-<div align=left>
+<div align=left>  
 -- 优化器：SGD，可能为了追求能够达到更小的loss   
 -- 训练的pair：将追踪的bbox物体放在图像正中心，这样可以label只生成一次，同时图像的尺寸大小不进行拉升变化，当尺寸超过原图打小时，用全图的平均值填充，效果如下：  
 <div align=center>
 <img src="./img/SiamFC/3.png" height=330, width=650>
-<div align=left>
+<div align=left>  
 -- 计算loss时候加入了权重，因为正样本区域和负样本区域的数量不均衡，13:17x17    
 - **自己整理一遍训练顺序**  
 -- 图像预处理以及分别保存，生成训练和测试数据集  
@@ -42,7 +42,7 @@
 <img src="./img/SiamFC/4.png" height=350, width=350>
 <div align=center>
 <img src="./img/SiamFC/5.png" height=350, width=500>
-<div align=left>
+<div align=left>  
 -- 开始迭代更新参数      
 -- 网络结构    
 >self.feat_extraction = nn.Sequential(  
@@ -74,22 +74,22 @@
 -- 事先准备window用于整流    
 <div align=center>
 <img src="./img/SiamFC/9.png" height=140, width=220>
-<div align=left>
+<div align=left>  
 -- 开始追踪  
 -- 加载第2帧图片   
 -- 求取三种/五种追踪区域大小，并生成相应scale的图片 255x255  
 <div align=center>
 <img src="./img/SiamFC/10.png" height=200, width=480>
-<div align=left>
+<div align=left>  
 -- 求取所有scale图片的x feature    
 -- 得到score map，上采样为272*272  
 <div align=center>
 <img src="./img/SiamFC/11.png" height=200, width=420>
-<div align=left>
+<div align=left>  
 -- 评比三种/五种上采样map的最大响应，得到最好的scale并进行汉宁窗平滑  
 <div align=center>
 <img src="./img/SiamFC/12.png" height=190, width=440>
-<div align=left>
+<div align=left>  
 -- 计算最好的scale对应的图像在原始图像中的位置，乘以对应比例加上被裁减图片从原图中切出的位置，得到最终的位置    
 -- 继续下一帧追踪    
 
@@ -106,11 +106,11 @@
 <img src="./img/SiamFC/6.png" height=38, width=220>
 <div align=center>
 <img src="./img/SiamFC/7.png" height=22, width=140>
-<div align=left>
+<div align=left>  
 - 我实际裁剪以后发现追踪区域的size还是会发生一些轻微的变形，并且通过双三次插值进行了补齐，如下图，引入了一些插值点
 <div align=center>
 <img src="./img/SiamFC/8.png" height=200, width=250>
-<div align=left>
+<div align=left>  
 
 ## *Related work*
 - 目前RNN还没有很成熟的追踪理论，展望孪生网络与RNN结合，运用于追踪
@@ -126,13 +126,13 @@
 -- OTB-13 （竟然比SINT还低，可能由于数据不是OTB等相关数据集训练的结果）  
 <div align=center>
 <img src="./img/SiamFC/13.png" height=280, width=360>
-<div align=left>
+<div align=left>  
 -- VOT等结果详见原文   
 -- 最后作者还提到增大数据集会对最终网络效果有显著提升，200万张图片还远远不够  
 -- 附上一张原文的追踪图  
 <div align=center>
 <img src="./img/SiamFC/14.png" height=500, width=480>
-<div align=left>
+<div align=left>  
 
 ## *Resources*
 - **原文：**  
