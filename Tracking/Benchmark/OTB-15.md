@@ -39,21 +39,21 @@
 ## *Evaluated tracking algorithms*
 - 看这张表就比较清楚地了解前面作者对追踪算法回顾的表征方法，追踪方法的介绍了，换句话说追踪本质上分两块，第一块就是学习什么样的目标区域特征，第二块拿着设计好的学到的特征去后续帧匹配，以什么样的方法匹配，或者说是以什么样的度量学习方法比较相似性  
 <div align=center>
-<img src="./img/OTB-15/1.png" height=500, width=500>
+<img src="./img/OTB-15/1.png" height=500, width=600>
 <div align=left>  
 
 ## *Datasets*
 - 首先，作者采用了以下11种特征标注了所有的100个视频，每个视频可以被打上多个标签  
 <div align=center>
-<img src="./img/OTB-15/2.png" height=500, width=500>
+<img src="./img/OTB-15/2.png" height=400, width=420>
 <div align=left>  
 - 整个数据集的各个标签分布如下图：  
 <div align=center>
-<img src="./img/OTB-15/3.png" height=500, width=500>
+<img src="./img/OTB-15/3.png" height=460, width=420>
 <div align=left>  
 - 整个数据集的首帧以及bbox如下图：  
 <div align=center>
-<img src="./img/OTB-15/4.png" height=500, width=500>
+<img src="./img/OTB-15/4.png" height=500, width=600>
 <div align=left>
 
 ## *Evaluation methodology*
@@ -78,7 +78,7 @@
 3.偏差的具体值：尺寸偏差八个（四个中心移动和四个角方向移动）+ 尺度偏差四个（原尺寸0.8到1.2倍大小）= 总共12个偏差检测  
 OPE, TRE, SRE配图如下：  
 <div align=center>
-<img src="./img/OTB-15/4.png" height=500, width=500>
+<img src="./img/OTB-15/5.png" height=400, width=500>
 <div align=left>  
 ### Robustness Evaluation with restart
 - 针对物体追丢，没法重新检测到物体而制定的检测方法
@@ -86,6 +86,7 @@ OPE, TRE, SRE配图如下：
 
 ## *Evaluation results*
 ### Overall performance
+
 ### Performance of SRER
 ### Performance analysis by attributes
 ### Tracking speed
