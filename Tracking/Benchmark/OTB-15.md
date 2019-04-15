@@ -86,8 +86,24 @@ OPE, TRE, SRE配图如下：
 
 ## *Evaluation results*
 ### Overall performance
-
+- 总体得分OTB-100高于OTB-50，因为OTB-50的视频更有挑战性
+- 对于相同的数据集 TRE > OPE > SRE，因为视频越短，追踪准确率越高，而TRE由于是不同帧开始追踪，所以包含很多短视频
+- 整体而言，虽然S得分在三种体制下不同，但是排名顺序基本一致，极个别算法有波动，比如ASLA算法对SRE的空间变化更鲁棒，得分更高  
+<div align=center>
+<img src="./img/OTB-15/6.png" height=420, width=800>
+<div align=left>    
 ### Performance of SRER
+- 自定义了一条曲线，纵坐标是平均的S，横坐标是追踪失败的帧数，一共规定了11个重叠区域的阈值，绘制这个曲线，阈值越低，平均重叠S值也越低，但是失败的帧数就越少，图如下：  
+<div align=center>
+<img src="./img/OTB-15/7.png" height=450, width=510>
+<div align=left>   
 ### Performance analysis by attributes
+- 详见原文表格，分别对11类物体的在阈值为0.5时候的平均S值以及1000帧的丢失帧数做了对比
 ### Tracking speed
 - 详见表一
+
+## *Resources*
+- **原文：**  
+[Object Tracking Benchmark](./paper/OTB.pdf)  
+- **OTB 平台：**  
+[http://cvlab.hanyang.ac.kr/tracker_benchmark/](http://cvlab.hanyang.ac.kr/tracker_benchmark/)
