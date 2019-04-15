@@ -1,5 +1,11 @@
 # Computer Vision: Tracking 
 ---
+## *Introduction*
+Here is everything concerning tracking.   
+You can find detailed introductions of trackers and benchmarks.   
+Recently, most trackers are adapted from Siamese Network. Thus, I lay much emphasis on the Siamese series trackers.
+
+---
 ## *Siamese Series:*  
 [**SINT**](Tracking/Siamese/SINT.md)   
 [**SiamFC**](Tracking/Siamese/SiamFC.md)  
