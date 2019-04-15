@@ -2,13 +2,7 @@
 ---
 ## *Siamese Series:*  
 [**SINT**](Tracking/Siamese/SINT.md)   
-[**SiamFC**](Tracking/Siamese/SiamFC.md) 
-
----  
-## *Benchmark*  
-**OTB-15**
-
-## To be continued：  
+[**SiamFC**](Tracking/Siamese/SiamFC.md)  
 ***SiamRPN***  
 ***CFNet***  
 ***DSiam***  
@@ -23,5 +17,13 @@
 ***Siam-BM***  
 ***Siam-Mask***  
 ***CIR***  
-***SiamRPN++***  
+***SiamRPN++***   
+
+---  
+## *Benchmark*  
+**OTB-15**  
+
+---
+
+
 
